@@ -1,0 +1,14 @@
+# 实验 6 · B 边：写入半（qwen3.5:9b，core.PROMPT 加三行 skip 之后）压 9/24 CUT 之后 session-mem 的 9 个 session。背景语料从 exp4-dedup.db 拷
+db = "data/exp6-ours.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"
+rerank = "BAAI/bge-reranker-v2-m3"
+
+[llm]
+base_url = "http://127.0.0.1:11434/v1"
+model = "qwen3.5:9b"

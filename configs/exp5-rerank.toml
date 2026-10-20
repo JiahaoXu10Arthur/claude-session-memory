@@ -1,0 +1,10 @@
+# 实验 5：rerank。融合后的前 20 条用 bge-reranker-v2-m3 重排；其余同实验 4
+db = "data/exp4-dedup.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"
+rerank = "BAAI/bge-reranker-v2-m3"

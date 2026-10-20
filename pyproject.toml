@@ -1,0 +1,16 @@
+[project]
+name = "session-mem"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "numpy",
+    "sentence-transformers",
+    "sqlite-vec",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

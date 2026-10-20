@@ -1,0 +1,23 @@
+# live：读取半加第一面。写入半（Stop hook、扫尾）只在做实验时开：扫尾要加 [write] sweep = true，不加就不扫（扫尾会拉起 Ollama 占 6.7 GB）。
+db = "data/live.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"
+rerank = "BAAI/bge-reranker-v2-m3"
+rerank_chars = 1500  # 只为速度：20 条全文 rerank 7 秒，截到 1500 字 3.8 秒。实验 5 不截。
+
+[serve]
+port = 8765
+
+[llm]
+# 依赖 Ollama 服务端 context_length 32768：40k 字符的窗口加 prompt 最多约 23k token
+base_url = "http://127.0.0.1:11434/v1"
+model = "qwen3.5:9b"
+
+[docs]
+# 第一面：每个 repo 自己的 ADR / spec / design 切节进 data/docs/<repo>.db，prompt 发出去时和 memory 一起注
+dir = "data/docs"

@@ -1,0 +1,9 @@
+# 实验 3：索引什么。语料只放 8/26–9/24，题换成新的十条，两边都按 turn 判；A 边是压缩后的 observation，B 边是压缩前的原文按 turn 切；其余同实验 2
+db = "data/exp3-turns.db"
+unit = "turn"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"

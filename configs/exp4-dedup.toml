@@ -1,0 +1,9 @@
+# 实验 4：去重。语料是 exp3-obs.db 里同 session 同日 narrative 相似度大于 0.9 的合并成一条；其余同 3 · A
+db = "data/exp4-dedup.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"

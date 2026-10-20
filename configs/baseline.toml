@@ -1,0 +1,8 @@
+# baseline：只 dense，MiniLM；比 claude-mem 少了 90 天窗，用的是精确搜索（上游是 HNSW）
+db = "data/minilm.db"
+
+[embed]
+model = "sentence-transformers/all-MiniLM-L6-v2"
+
+[search]
+mode = "dense"

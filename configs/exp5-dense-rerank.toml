@@ -1,0 +1,10 @@
+# 实验 5 的补格：只 dense 加 rerank。其余同实验 5（exp4-dedup 语料、bge-m3、bge-reranker 前 20）
+db = "data/exp4-dedup.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "dense"
+rerank = "BAAI/bge-reranker-v2-m3"

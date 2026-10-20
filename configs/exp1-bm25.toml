@@ -1,0 +1,8 @@
+# 实验 1：dense 加 BM25（unicode61，题目按空格和中文标点切），RRF k=60；其余同 baseline
+db = "data/minilm.db"
+
+[embed]
+model = "sentence-transformers/all-MiniLM-L6-v2"
+
+[search]
+mode = "hybrid"

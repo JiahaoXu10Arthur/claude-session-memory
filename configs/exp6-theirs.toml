@@ -1,0 +1,10 @@
+# 实验 6 · A 边：claude-mem（claude-sonnet-4-6）记的同 9 个 session 的 749 条，重新 embed。背景语料从 exp4-dedup.db 拷
+db = "data/exp6-theirs.db"
+unit = "observation"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"
+rerank = "BAAI/bge-reranker-v2-m3"

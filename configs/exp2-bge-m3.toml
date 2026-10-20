@@ -1,0 +1,8 @@
+# 实验 2：embedding 换成 bge-m3（1024 维），灌进新库；其余同实验 1
+db = "data/bge-m3.db"
+
+[embed]
+model = "BAAI/bge-m3"
+
+[search]
+mode = "hybrid"
